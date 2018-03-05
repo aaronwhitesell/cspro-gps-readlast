@@ -1,0 +1,54 @@
+﻿[CAPI QUESTIONS]
+Version=CSPro 7.1
+
+[LANGUAGES]
+EN=English
+
+[QUESTION]
+Field=GPS_DICT.GPS_READING
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs19 %gps_reading_capi_text%\par
+EN=\par
+EN=GPS data: \b %gps_data_status_capi_text%\par
+EN=\b0 %gps_accuracy_status_capi_label% \b %gps_accuracy_status_capi_text%\par
+EN=}
+
+[QUESTION]
+Field=GPS_DICT.GPS_RESULTS
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Latitude = %GPS_LATITUDE%\par
+EN=Longitude = %GPS_LONGITUDE%\par
+EN=Altitude = %GPS_ALTITUDE%\par
+EN=Accuracy = %GPS_ACCURACY%\par
+EN=Satellites = %GPS_SATELLITES%\par
+EN=Read time = %GPS_READTIME%\par
+EN=}
+
+[QUESTION]
+Field=GPS_DICT.POLL_GPS_1
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 GPS was polled using the function gps(readlast).\par
+EN=}
+
+[QUESTION]
+Field=GPS_DICT.POLL_GPS_2
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 GPS was polled using the function gps(readlast).\par
+EN=}
+
+[QUESTION]
+Field=GPS_DICT.POLL_GPS_3
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 GPS was polled a third time.\par
+EN=}
+
