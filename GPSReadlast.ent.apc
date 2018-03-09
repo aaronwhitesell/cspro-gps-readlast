@@ -318,18 +318,12 @@ PROC POLL_GPS_1
 
 onfocus
 
-	// Clear selection
-	$ = notappl;
-
 	PollGPS();
 
 
 PROC POLL_GPS_2
 
 onfocus
-
-	// Clear selection
-	$ = notappl;
 
 	PollGPS();
 
@@ -354,7 +348,7 @@ onfocus
 			gps_accuracy_status_capi_text = "bad";
 		endif;
 
-		// Preselect option to keep data
+		// Preselect "keep data," so field can be advanced through when returning from partial save 
 		$ = 2;
 
 	else
@@ -404,9 +398,6 @@ postproc
 PROC GPS_RESULTS
 
 onfocus
-
-	// Clear selection
-	$ = notappl;
 
 	// Poll GPS unit. This is done, because the user may decide to move backwards after seeing the GPS results.
 	PollGPS();
