@@ -60,15 +60,26 @@ Len=1
 ZeroFill=Yes
 
 [ValueSet]
-Label=GPS reading
-Name=GPS_READING_VS1
+Label=GPS Android
+Name=GPS_ANDROID_READING_VS1
 Value=1;Yes
 Value=3;No
 
 [ValueSet]
-Label=Take GPS reading
-Name=GPS_READING_VS2
+Label=GPS Android
+Name=GPS_ANDROID_READING_VS2
 Value=1;Yes
+Value=2;No, but keep previously collected GPS data.
+Value=3;No, but delete previously collected GPS data.
+
+[ValueSet]
+Label=GPS Windows
+Name=GPS_WINDOWS_READING_VS1
+Value=3;No
+
+[ValueSet]
+Label=GPS Windows
+Name=GPS_WINDOWS_READING_VS2
 Value=2;No, but keep previously collected GPS data.
 Value=3;No, but delete previously collected GPS data.
 

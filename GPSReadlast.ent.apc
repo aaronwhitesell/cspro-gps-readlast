@@ -284,9 +284,9 @@ PROC GPS_FF
 
 preproc
 
-	if getos() <> 20 then
-		// Not Android OS
-		warning("This application is only supported on Android OS. Application will exit.");
+	if not getos() in 10, 20 then
+		// Not Windows or Android OS
+		warning("This application is supported for Android and Windows OS. Application will exit.");
 		stop(1);
 	endif;
 
@@ -336,8 +336,13 @@ onfocus
 
 	if IsCompleteGPSData() then
 		// Update value set
-		setvalueset(GPS_READING, GPS_READING_VS2);
 
+		if getos() = 10 then
+			setvalueset(GPS_READING, GPS_WINDOWS_READING_VS2);
+		else
+			setvalueset(GPS_READING, GPS_ANDROID_READING_VS2);
+		endif;
+		
 		// Update CAPI Text
 		gps_data_status_capi_text = "collected";
 		gps_accuracy_status_capi_label = "GPS accuracy: ";
@@ -353,7 +358,11 @@ onfocus
 
 	else
 		// Update value set
-		setvalueset(GPS_READING, GPS_READING_VS1);
+		if getos() = 10 then
+			setvalueset(GPS_READING, GPS_WINDOWS_READING_VS1);
+		else
+			setvalueset(GPS_READING, GPS_ANDROID_READING_VS1);
+		endif;
 
 		// Update CAPI Text
 		gps_data_status_capi_text = "not collected";
